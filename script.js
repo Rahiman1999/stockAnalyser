@@ -29,6 +29,8 @@ check.addEventListener("click", () => {
         ? `profit is ${p}%  📈😁`
         : `loss is ${(k = Math.abs(p))}%  📉😥`
     } `;
+  } else if (stock.valueAsNumber == today.valueAsNumber) {
+    display.innerHTML = `Today no loss or profit for you 😐`;
   } else if (stock.valueAsNumber && quantity.valueAsNumber) {
     display.innerHTML = `please enter today's stock price`;
   } else if (today.valueAsNumber && quantity.valueAsNumber) {
